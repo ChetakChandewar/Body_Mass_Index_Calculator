@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- BMI Calculator CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#F67E4D"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            tools:ignore="TextSizeCheck">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/bmi_calculator"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="#221515"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Weight Group CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/weight_in_kg"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textColor="#131313"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#15DFB6"
+                    android:hint="@string/Enter_Weight"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="#00838F"
+                    android:textSize="20sp"
+                    android:autofillHints="" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Height Group CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/height_in_cm"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textColor="#131313"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#15DFB6"
+                    android:hint="@string/Enter_Height"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="#00838F"
+                    android:textSize="20sp"
+                    android:autofillHints="" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Calculate Button CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#15DFB6"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="@string/calculate"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Result TextView CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Status TextView CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="25sp"
+                android:text="@string/status"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="gone" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
