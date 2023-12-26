@@ -45,6 +45,7 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
+            <!-- Your existing Weight CardView code here... -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,9 +72,11 @@
                     android:hint="@string/Enter_Weight"
                     android:inputType="numberDecimal"
                     android:textColorHint="#00838F"
+                    android:gravity="center"
                     android:textSize="20sp"
                     android:autofillHints="" />
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Height Group CardView -->
@@ -85,6 +88,7 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
+            <!-- Your existing Height CardView code here... -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,9 +116,11 @@
                     android:hint="@string/Enter_Height"
                     android:inputType="numberDecimal"
                     android:textColorHint="#00838F"
+                    android:gravity="center"
                     android:textSize="20sp"
                     android:autofillHints="" />
             </LinearLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Calculate Button CardView -->
@@ -126,6 +132,7 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
+            <!-- Your existing Calculate Button CardView code here... -->
             <Button
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
@@ -136,6 +143,7 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:textColor="#FFFFFF"
                 android:textSize="25sp" />
+
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Result TextView CardView -->
@@ -147,6 +155,7 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
+            <!-- Your existing Result TextView CardView code here... -->
             <TextView
                 android:id="@+id/result"
                 android:layout_width="match_parent"
@@ -155,14 +164,15 @@
                 android:gravity="center"
                 android:textSize="25sp"
                 android:textStyle="bold" />
+
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Status TextView CardView -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/statusCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 

@@ -6,7 +6,7 @@
     <string name="obesity">Suffering from Obesity</string>
     <string name="valid_numbers">Enter Valid Numbers</string>
     <string name="height_zero_error">Height cannot be zero</string>
-    <string name="bmi_calculator">BMI CAlCULATOR</string>
+    <string name="bmi_calculator">BMI CALCULATOR</string>
     <string name="weight_in_kg">Weight (in Kg)</string>
     <string name="height_in_cm">Height (in cm)</string>
     <string name="calculate">Calculate</string>
@@ -14,5 +14,6 @@
     <string name="Enter_Weight">Enter Weight</string>
     <string name="Enter_Height">Enter Height</string>
     <string name="status">Status</string>
+
 
 </resources>

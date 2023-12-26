@@ -1,5 +1,6 @@
 package com.example.bodymassindexcalculator;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +10,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.card.MaterialCardView;
+
 public class MainActivity extends AppCompatActivity {
+
+    private MaterialCardView statusCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.btnSubmit);
         TextView textView = findViewById(R.id.result);
         TextView textView1 = findViewById(R.id.status);
+        statusCardView = findViewById(R.id.statusCardView);
 
         button.setOnClickListener(view -> {
             try {
@@ -46,12 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (bmi < 18.5) {
                     textView1.setText(getString(R.string.under_weight));
+                    updateStatusCardColor(Color.YELLOW);
                 } else if (bmi >= 18.5 && bmi < 24.9) {
                     textView1.setText(getString(R.string.healthy));
+                    updateStatusCardColor(Color.GREEN);
                 } else if (bmi >= 24.9 && bmi < 30) {
                     textView1.setText(getString(R.string.overweight));
+                    updateStatusCardColor(Color.parseColor("#FFA500")); // Orange color
                 } else if (bmi >= 30) {
                     textView1.setText(getString(R.string.obesity));
+                    updateStatusCardColor(Color.RED);
                 } else {
                     textView1.setText(getString(R.string.valid_numbers));
                 }
@@ -62,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 showToast("Invalid input. Please enter valid numbers for height and weight.");
             }
         });
+    }
+
+    private void updateStatusCardColor(int color) {
+        statusCardView.setCardBackgroundColor(color);
     }
 
     private void showToast(String message) {
